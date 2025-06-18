@@ -1,0 +1,72 @@
+<div class="row mt-5">
+  <div class="col-6 mx-auto">
+    <div class="mb-3">
+      <select class="form-select form-select-lg" name="categories" [(ngModel)]="selectedCatId" (ngModelChange)="onVariableChange($event)">
+        <option selected value="0">Category</option>
+        @for (cat of categories; track cat.id) {
+        <option [value]="cat.id">{{ cat.name }}</option>
+        }
+      </select>
+    </div>
+  </div>
+  <div class="col-6 mx-auto">
+    <input
+      type="text"
+      class="form-control form-select-lg"
+      placeholder="Sub Category"
+    />
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-7">
+    <div class="input-group">
+      <input class="form-control border-end-0 border" type="search" value="select finding" id="example-search-input" [(ngModel)]="searchTitle" (ngModelChange)="onTitleChange($event)">
+        <span class="input-group-append">
+          <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button">
+             <i class="fa fa-search"></i>
+          </button>
+        </span>
+      </div>
+  </div>
+
+  <div class="col-3">
+    <button class="px-5 py-2 other">Other</button>
+  </div>
+</div>
+
+<div class="text-center">
+  <p class="text-light mt-5 d-inline-block fs-4 fw-bold">Finding List</p>
+</div>
+
+<div class="row mt-5">
+  <div class="col-6">
+    <p class="fw-bold fs-5 ms-5">Issue Title</p>
+  </div>
+  <div class="col-6">
+    <p class="fw-bold fs-5">Criticality</p>
+  </div>
+</div>
+
+<div class="finding-list p-5">
+  @for (finding of filteredFindings; track finding.id) {
+    <div class="row">
+      <div class="col-6">
+        <p class="text-light fw-bold">{{finding.title}}</p>
+      </div>
+      <div class="col-3">
+        @if (finding.catName == "Critical") {
+          <p class="fw-bold text-danger">{{finding.catName}}</p>
+        }@else if(finding.catName == "Minor") {
+          <p class="fw-bold" style="color: #BBBD60;">{{finding.catName}}</p>
+        }@else {
+          <p class="fw-bold" style="color: var(--color);">{{finding.catName}}</p>
+        }
+      </div>
+      <div class="col-3">
+        <button class="px-5 py-2 remove" (click)="removeFinding(finding.id)">Remove</button>
+      </div>
+    </div>
+    <hr>
+  }
+</div>

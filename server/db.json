@@ -1,0 +1,54 @@
+{
+  "findings": [
+    {
+      "id": "1",
+      "title": "1st Finding",
+      "catName": "Minor",
+      "catId": 1
+    },
+    {
+      "id": "2",
+      "title": "2nd Finding",
+      "catName": "Minor",
+      "catId": 1
+    },
+    {
+      "id": "3",
+      "title": "3rd Finding",
+      "catName": "Major",
+      "catId": 2
+    },
+    {
+      "id": "4",
+      "title": "4th Finding",
+      "catName": "Major",
+      "catId": 2
+    },
+    {
+      "id": "5",
+      "title": "5th Finding",
+      "catName": "Critical",
+      "catId": 3
+    },
+    {
+      "id": "6",
+      "title": "6th Finding",
+      "catName": "Critical",
+      "catId": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Minor"
+    },
+    {
+      "id": "2",
+      "name": "Major"
+    },
+    {
+      "id": "3",
+      "name": "Critical"
+    }
+  ]
+}

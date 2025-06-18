@@ -1,0 +1,10 @@
+:root{
+    --blue: #21418C;
+    --color: #E2803E;
+    --menubg: #5969A5;
+    --menubgActive: #9597C2;
+}
+
+body{
+    background-color: var(--blue);
+}

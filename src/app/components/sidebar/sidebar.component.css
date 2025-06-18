@@ -1,0 +1,32 @@
+ul{
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    border-radius: 0 15px 15px 0;
+}
+
+ul li{
+    padding:25px 25px 25px 55px;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+li:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+.active-link{
+    background-color: var(--blue);
+}
+
+.active-link a{
+    color: var(--color);
+}
+
+.active-link li:target::after{
+    box-shadow: 0 -25px 0 0 var(--blue);
+}

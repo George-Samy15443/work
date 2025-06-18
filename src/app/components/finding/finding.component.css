@@ -1,0 +1,17 @@
+h5{
+    color:var(--color);
+    margin-bottom: 0;
+}
+
+button{
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    background-color: var(--menubg);
+    border-radius: 15px 15px 0 0;
+    border: none;
+}
+
+.active-menu{
+    background-color: var(--menubgActive);
+}

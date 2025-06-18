@@ -1,0 +1,7 @@
+.material-icons{
+    color: var(--blue);
+}
+
+button > span.badge{
+    background-color: var(--color);
+}
